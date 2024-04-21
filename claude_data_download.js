@@ -34,6 +34,7 @@ async function fetchData(uuid) {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
+        console.log("Data fetched for uuid", uuid)
         dataList.push(data);
     } catch (error) {
         console.error('Error fetching data:', error);
